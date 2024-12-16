@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imersão do Cliente</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Imersão do Cliente</h1>
+            <p>Informações obtidas sobre o cliente "{{ client_name }}" para o projeto "{{ project_type }}".</p>
+        </header>
+
+        <!-- Mensagens de Erro -->
+        <div class="error-messages">
+            {% if error_messages %}
+                <ul>
+                    {% for message in error_messages %}
+                        <li style="color: red;">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+
+        <!-- Links de Notícias -->
+        <section>
+            <h2>Links de Notícias</h2>
+            {% if news_links %}
+                <ul>
+                    {% for news in news_links %}
+                        <li><a href="{{ news.url }}" target="_blank">{{ news.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>Nenhuma notícia encontrada.</p>
+            {% endif %}
+        </section>
+
+        <!-- Dados do Glassdoor -->
+        <section>
+            <h2>Dados do Glassdoor</h2>
+            {% if glassdoor_data %}
+                <ul>
+                    {% for data in glassdoor_data %}
+                        <li>
+                            <strong>{{ data.question }}</strong>: {{ data.answer }}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>Nenhuma informação encontrada no Glassdoor.</p>
+            {% endif %}
+        </section>
+
+        <!-- Análise da OpenAI -->
+        <section>
+            <h2>Análise da OpenAI</h2>
+            {% if analysis %}
+                <p>{{ analysis }}</p>
+            {% else %}
+                <p>A análise não está disponível no momento.</p>
+            {% endif %}
+        </section>
+    </div>
+</body>
+</html>

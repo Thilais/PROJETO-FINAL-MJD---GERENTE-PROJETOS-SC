@@ -1,0 +1,197 @@
+/* Corpo geral da página */
+body {
+    font-family: 'Poppins', sans-serif; /* Fonte arredondada e moderna */
+    background: url('https://anpei.org.br/site-novo/wp-content/uploads/2019/05/Gestao-de-projetos-tecnologicos-e-de-inovacao-foco-em-resultado-1.jpg') no-repeat center center fixed; /* Imagem de fundo */
+    background-size: cover;
+    color: #4a3f35; /* Terracota suave para o texto */
+    margin: 0;
+    padding: 0;
+}
+
+/* Container centralizado */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 248, 240, 0.9); /* Fundo branco com transparência */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    backdrop-filter: blur(5px); /* Efeito de vidro */
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #d9644a; /* Cor terracota mais intensa */
+    font-size: 2.5em;
+    margin: 0;
+}
+
+header p {
+    color: #6b4f3b; /* Texto secundário terracota */
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+/* Botões */
+button, .button {
+    display: inline-block;
+    background-color: #d9644a; /* Botões terracota */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .button:hover {
+    background-color: #b8513a; /* Efeito hover */
+}
+
+/* Inputs */
+input[type="file"] {
+    margin: 10px 0;
+    padding: 8px;
+    border: 2px solid #d9644a;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 1em;
+    color: #4a3f35;
+}
+
+/* Caixas de texto */
+textarea {
+    width: 100%;
+    height: 200px;
+    padding: 15px;
+    border: 2px solid #d9644a;
+    border-radius: 10px;
+    background: white;
+    resize: none;
+    color: #4a3f35;
+    font-size: 1em;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Links */
+a {
+    color: #d9644a;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Listas de links */
+.links li {
+    margin-bottom: 10px;
+}
+
+/* Downloads */
+.downloads {
+    list-style: none;
+    padding: 0;
+}
+
+.downloads li {
+    margin-bottom: 15px;
+}
+
+/* Texto centrado */
+.text-center {
+    text-align: center;
+}
+
+/* Títulos */
+h2 {
+    color: #b8513a;
+    font-size: 1.8em;
+    margin-top: 20px;
+}
+
+/* Personalização para imagens de fundo */
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* Alinhamento vertical dos grupos do formulário */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaçamento vertical entre os elementos */
+}
+
+/* Agrupamento de campos de entrada */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Espaçamento entre o label e o campo */
+}
+
+.form-group label {
+    font-size: 1em;
+    color: #6b4f3b; /* Mesma cor terracota suave para consistência */
+    font-weight: bold;
+}
+
+/* Input de texto personalizado */
+input[type="text"] {
+    padding: 10px;
+    border: 2px solid #d9644a;
+    border-radius: 8px;
+    font-size: 1em;
+    background-color: white;
+    color: #4a3f35;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve para destacar os campos */
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #b8513a; /* Foco com cor terracota mais escura */
+}
+
+/* Estilo para o hint (dica de formato) */
+.hint {
+    font-size: 0.9em;
+    color: #8a7968; /* Cor mais clara para não competir com os campos principais */
+    margin-top: 5px;
+}
+
+/* Botão ajustado para formulários */
+button, .button {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 600px) {
+    .form-group {
+        gap: 10px;
+    }
+
+    input[type="text"], input[type="file"] {
+        font-size: 0.9em;
+    }
+
+    button, .button {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+}

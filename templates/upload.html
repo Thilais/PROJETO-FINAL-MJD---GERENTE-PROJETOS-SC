@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Proposta Comercial</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>GERENTE DE PROJETOS</h1>
+            <p>Carregue uma proposta comercial para gerar os arquivos do projeto automaticamente.</p>
+        </header>
+        <main>
+            <form action="/generate-scope" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="file">Selecione um arquivo PDF:</label>
+                    <input type="file" name="file" id="file" accept=".pdf" required>
+                    <span class="hint">Somente arquivos no formato PDF são aceitos.</span>
+                </div>
+                <div class="form-group">
+                    <label for="client_name">Nome do Cliente:</label>
+                    <input type="text" name="client_name" id="client_name" placeholder="Insira o nome do cliente" required>
+                </div>
+                <div class="form-group">
+                    <label for="project_type">Tipo de Projeto:</label>
+                    <input type="text" name="project_type" id="project_type" placeholder="Insira o tipo de projeto" required>
+                </div>
+                <button type="submit" class="button primary">Gerar Escopo Acordado</button>
+            </form>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados do Projeto</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Arquivos Gerados</h1>
+            <a href="/" class="button">Home</a>
+            <p>Faça o download dos arquivos gerados abaixo:</p>
+        </header>
+        <main>
+            <ul class="downloads">
+                <li><a href="/data/escopo_acordado.docx" class="button">Baixar Escopo Acordado (Word)</a></li>
+                <li><a href="/data/cronograma.xlsx" class="button">Baixar Cronograma (Excel)</a></li>
+                <li><a href="/data/apresentacao_kickoff.pptx" class="button">Baixar Apresentação (PowerPoint)</a></li>
+            </ul>
+            <section class="preview">
+                <h2>Pré-visualização do Escopo Acordado</h2>
+                <textarea readonly>{{ generated_text }}</textarea>
+            </section>
+            <form action="/init-immersion" method="POST">
+                <input type="hidden" name="client_name" value="{{ client_name }}">
+                <input type="hidden" name="project_type" value="{{ project_type }}">
+                <button type="submit" class="button primary">Iniciar Imersão</button>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
