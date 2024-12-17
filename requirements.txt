@@ -8,4 +8,4 @@ python-pptx==0.6.21
 requests==2.31.0
 beautifulsoup4==4.12.2
 datetime==5.4
-gunicorn
+gunicorn==20.1.0

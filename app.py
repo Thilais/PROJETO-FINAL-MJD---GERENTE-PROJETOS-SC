@@ -123,8 +123,11 @@ def generate_scope():
     excel_path = "data/cronograma.xlsx"
     df.to_excel(excel_path, index=False)
 
+    # Caminho universal para qualquer sistema operacional
+    file_path = os.path.join("data", "modelo_kickoff.pptx")
+
     # Criar a apresentação em PowerPoint
-    ppt = Presentation("data\modelo_kickoff.pptx")
+    ppt = Presentation(file_path)
     for slide in ppt.slides:
         for shape in slide.shapes:
             if shape.has_text_frame:
@@ -135,6 +138,7 @@ def generate_scope():
                 if "<CRONOGRAMA>" in shape.text:
                     shape.text = "Cronograma será anexado na apresentação."
 
+    # Salvar a apresentação em um novo arquivo
     ppt_path = "data/apresentacao_kickoff.pptx"
     ppt.save(ppt_path)
 
