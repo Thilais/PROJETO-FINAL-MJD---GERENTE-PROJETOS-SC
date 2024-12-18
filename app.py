@@ -23,9 +23,9 @@ app = Flask(__name__)
 
 # Aprendizado prévio incorporado
 LEARNING_DATA_PATHS = [
-    "data/Proposta-Comercial.pdf",
-    "data/CLIENTE_Escopo_acordado.pdf",
-    "data/CLIENTE_Kick-off.pdf"
+    os.path.join("data", "Proposta-Comercial.pdf"),
+    os.path.join("data", "CLIENTE_Escopo_acordado.pdf"),
+    os.path.join("data", "CLIENTE_Kick-off.pdf")
 ]
 
 def load_learning_data():
